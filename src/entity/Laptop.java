@@ -1,14 +1,20 @@
 package entity;
 
+import javax.persistence.*;
+
 @Entity(name = "laptop_table")
 public class Laptop {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "lap_id")
     private long laptopId;
 
     private String brand;
 
+    //--------mapping------------
+    @OneToOne(mappedBy = "laptop")
+    private Student student;
+    //--------mapping------------
     public Laptop() {
     }
 

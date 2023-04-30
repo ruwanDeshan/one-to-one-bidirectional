@@ -1,5 +1,7 @@
 package entity;
 
+import javax.persistence.*;
+
 @Entity(name = "student_table")
 public class Student {
     @Id
