@@ -15,12 +15,23 @@ public class Laptop {
     @OneToOne(mappedBy = "laptop")
     private Student student;
     //--------mapping------------
+
+
     public Laptop() {
     }
 
-    public Laptop(long laptopId, String brand) {
+    public Laptop(long laptopId, String brand, Student student) {
         this.laptopId = laptopId;
         this.brand = brand;
+        this.student = student;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
     }
 
     public long getLaptopId() {
