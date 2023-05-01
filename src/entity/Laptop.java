@@ -49,4 +49,13 @@ public class Laptop {
     public void setBrand(String brand) {
         this.brand = brand;
     }
+
+  /*  @Override
+    public String toString() {
+        return "Laptop{" +
+                "laptopId=" + laptopId +
+                ", brand='" + brand + '\'' +
+                ", student=" + student +
+                '}';
+    }*/
 }
